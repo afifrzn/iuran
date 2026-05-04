@@ -2,7 +2,7 @@
 // Sesuaikan dengan konfigurasi server kamu
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'passwordbaru');
 define('DB_NAME', 'iuran_db');
 
 define('HARGA_MAKAN', 138000);
