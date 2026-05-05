@@ -46,7 +46,7 @@ public function bayar(Request $req, $id)
     $p = Participant::findOrFail($id);
 
     $p->paid = true;
-    $p->payment_method = $req->input('method');
+    // $p->payment_method = $req->input('method');
     $p->save();
 
     return response()->json($p);
