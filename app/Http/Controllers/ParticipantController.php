@@ -56,4 +56,15 @@ public function batal($id)
 
     return response()->json($p);
 }
+
+public function downgrade($id)
+{
+    $p = Participant::findOrFail($id);
+
+    $p->with_meal = false;
+    $p->amount = 100000;
+    $p->save();
+
+    return response()->json($p);
+}
 }
