@@ -46,4 +46,14 @@ public function bayar(Request $req, $id)
 
     return response()->json($p);
 }
+
+public function batal($id)
+{
+    $p = Participant::findOrFail($id);
+
+    $p->paid = false;
+    $p->save();
+
+    return response()->json($p);
+}
 }
