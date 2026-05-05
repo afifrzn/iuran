@@ -39,12 +39,7 @@ class ParticipantController extends Controller
 
 public function bayar(Request $req, $id)
 {
-    $req->validate([
-        'method' => 'required|in:BCA,QRIS'
-    ]);
-
     $p = Participant::findOrFail($id);
-
     $p->paid = true;
     // $p->payment_method = $req->input('method');
     $p->save();
